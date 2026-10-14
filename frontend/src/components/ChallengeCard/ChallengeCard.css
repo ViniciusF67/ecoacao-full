@@ -1,0 +1,32 @@
+.challenge-card { display: flex; flex-direction: column; height: 100%; }
+.challenge-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+
+.challenge-card__image { width: 100%; height: 170px; object-fit: cover; }
+
+.challenge-card__body {
+  padding: var(--space-4) var(--space-5) var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  flex: 1;
+}
+
+.challenge-card__tags { display: flex; gap: var(--space-2); flex-wrap: wrap; }
+
+.challenge-card__difficulty {
+  display: inline-block;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  padding: 0.2rem 0.65rem;
+  border-radius: var(--radius-pill);
+  width: fit-content;
+}
+.challenge-card__difficulty--easy { background: var(--eco-green-100); color: var(--eco-green-700); }
+.challenge-card__difficulty--medium { background: #fdf3df; color: #91710f; }
+.challenge-card__difficulty--hard { background: #fbeceb; color: var(--eco-red-500); }
+
+.challenge-card__title { font-size: var(--fs-md); margin: 0; }
+.challenge-card__title a { color: var(--eco-green-900); }
+.challenge-card__title a:hover { color: var(--eco-green-700); }
+
+.challenge-card__desc { font-size: var(--fs-sm); margin: 0; flex: 1; }

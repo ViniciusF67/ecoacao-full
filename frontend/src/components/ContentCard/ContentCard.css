@@ -1,0 +1,20 @@
+.content-card { display: flex; flex-direction: column; height: 100%; }
+.content-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+
+.content-card__image { width: 100%; height: 170px; object-fit: cover; }
+
+.content-card__body {
+  padding: var(--space-4) var(--space-5) var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  flex: 1;
+}
+
+.content-card__title { font-size: var(--fs-md); margin: 0; }
+.content-card__title a { color: var(--eco-green-900); }
+.content-card__title a:hover { color: var(--eco-green-700); }
+
+.content-card__desc { font-size: var(--fs-sm); margin: 0; flex: 1; }
+
+.content-card__link { font-size: var(--fs-sm); font-weight: 600; color: var(--eco-blue-700); }

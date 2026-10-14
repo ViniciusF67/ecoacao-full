@@ -1,0 +1,240 @@
+/* =========================================================
+   ECOAÇÃO — Sistema de identidade visual (design tokens)
+   ========================================================= */
+:root {
+  /* Paleta principal */
+  --eco-green-900: #0a4a34;
+  --eco-green-700: #0e7c5a;
+  --eco-green-500: #16a374;
+  --eco-green-100: #eaf7f0;
+
+  --eco-blue-900: #0c2f4d;
+  --eco-blue-700: #145d8c;
+  --eco-blue-500: #1f8ecf;
+  --eco-blue-100: #e8f4fc;
+
+  --eco-white: #ffffff;
+  --eco-gray-50: #f6f8f7;
+  --eco-gray-100: #eef1f0;
+  --eco-gray-300: #d6dcda;
+  --eco-gray-500: #7c8b86;
+  --eco-gray-700: #4a5854;
+  --eco-dark: #14211d;
+
+  --eco-yellow-500: #e2b93b; /* selo/alerta suave, uso pontual */
+  --eco-red-500: #c85a4f;    /* erro */
+
+  /* Gradiente de marca (uso pontual: hero, destaques) */
+  --eco-gradient: linear-gradient(135deg, var(--eco-green-700) 0%, var(--eco-blue-700) 100%);
+
+  /* Tipografia */
+  --font-display: 'Fraunces', 'Georgia', serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --fs-xs: 0.8rem;
+  --fs-sm: 0.9rem;
+  --fs-base: 1rem;
+  --fs-md: 1.15rem;
+  --fs-lg: 1.4rem;
+  --fs-xl: 1.9rem;
+  --fs-2xl: 2.6rem;
+  --fs-3xl: 3.4rem;
+
+  /* Espaçamento */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+
+  /* Layout */
+  --container-max: 1180px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-pill: 999px;
+
+  /* Sombras */
+  --shadow-sm: 0 1px 3px rgba(20, 33, 29, 0.08);
+  --shadow-md: 0 8px 24px rgba(20, 33, 29, 0.10);
+  --shadow-lg: 0 20px 45px rgba(12, 47, 77, 0.14);
+
+  --transition-base: 180ms ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--eco-dark);
+  background: var(--eco-white);
+  font-size: var(--fs-base);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--eco-green-900);
+  line-height: 1.15;
+  margin: 0 0 var(--space-4);
+  font-weight: 600;
+}
+
+h1 { font-size: var(--fs-3xl); }
+h2 { font-size: var(--fs-2xl); }
+h3 { font-size: var(--fs-lg); }
+h4 { font-size: var(--fs-md); }
+
+p { margin: 0 0 var(--space-4); color: var(--eco-gray-700); }
+
+a {
+  color: var(--eco-blue-700);
+  text-decoration: none;
+  transition: color var(--transition-base);
+}
+a:hover { color: var(--eco-green-700); }
+
+img { max-width: 100%; display: block; }
+
+button, input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+ul, ol { padding-left: 1.2rem; }
+
+:focus-visible {
+  outline: 3px solid var(--eco-blue-500);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Layout utilitário */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--space-5);
+}
+
+.section {
+  padding: var(--space-8) 0;
+}
+
+.section-header {
+  max-width: 640px;
+  margin: 0 auto var(--space-6);
+  text-align: center;
+}
+
+.section-header p { color: var(--eco-gray-700); }
+
+.eyebrow {
+  display: inline-block;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--eco-green-700);
+  background: var(--eco-green-100);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-pill);
+  margin-bottom: var(--space-3);
+}
+
+.grid {
+  display: grid;
+  gap: var(--space-5);
+}
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+.text-center { text-align: center; }
+
+.page-header {
+  background: var(--eco-green-900);
+  color: var(--eco-white);
+  padding: var(--space-7) 0 var(--space-6);
+}
+.page-header h1 { color: var(--eco-white); margin-bottom: var(--space-2); }
+.page-header p { color: var(--eco-green-100); max-width: 560px; }
+
+/* Utilitários compartilhados pelas páginas de detalhe (Notícia, Conteúdo, Desafio) */
+.voltar-link {
+  display: inline-block;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  margin: var(--space-6) 0 var(--space-4);
+}
+
+.detail-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--fs-sm);
+  color: var(--eco-gray-500);
+  margin-bottom: var(--space-5);
+}
+
+.detail-image {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-6);
+}
+
+.detail-body {
+  max-width: 760px;
+  font-size: var(--fs-md);
+}
+.detail-body p { margin-bottom: var(--space-4); }
+
+.tag {
+  display: inline-block;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--eco-blue-700);
+  background: var(--eco-blue-100);
+  padding: 0.2rem 0.65rem;
+  border-radius: var(--radius-pill);
+  width: fit-content;
+}
+
+.form-message {
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-sm);
+  font-size: var(--fs-sm);
+  margin-bottom: var(--space-4);
+}
+.form-message.success {
+  background: var(--eco-green-100);
+  color: var(--eco-green-900);
+  border: 1px solid var(--eco-green-500);
+}
+.form-message.error {
+  background: #fbeceb;
+  color: var(--eco-red-500);
+  border: 1px solid var(--eco-red-500);
+}
+
+@media (max-width: 960px) {
+  .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  :root { --fs-3xl: 2.5rem; --fs-2xl: 2rem; }
+}
+
+@media (max-width: 640px) {
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+  .section { padding: var(--space-7) 0; }
+  :root { --fs-3xl: 2.1rem; --fs-2xl: 1.7rem; --fs-xl: 1.5rem; }
+}

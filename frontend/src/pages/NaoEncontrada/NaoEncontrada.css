@@ -1,0 +1,11 @@
+.nao-encontrada { min-height: calc(100vh - 340px); display: flex; align-items: center; }
+.nao-encontrada__inner { text-align: center; padding: var(--space-8) 0; }
+.nao-encontrada__codigo {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: var(--eco-green-500);
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-2);
+}

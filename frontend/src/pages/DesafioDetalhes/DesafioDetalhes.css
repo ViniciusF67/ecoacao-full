@@ -1,0 +1,29 @@
+.desafio-detalhe .container {
+  padding-bottom: var(--space-7);
+}
+
+.desafio-detalhe__tags {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-3);
+}
+
+.desafio-detalhe__acao {
+  max-width: 760px;
+  margin-top: var(--space-5);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--eco-gray-100);
+}
+
+.desafio-detalhe__aviso {
+  font-size: var(--fs-sm);
+  color: var(--eco-gray-700);
+}
+
+.desafio-detalhe__status {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  align-items: flex-start;
+}

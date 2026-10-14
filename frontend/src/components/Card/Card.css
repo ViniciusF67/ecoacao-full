@@ -1,0 +1,8 @@
+.card {
+  background: var(--eco-white);
+  border: 1px solid var(--eco-gray-100);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: box-shadow var(--transition-base), transform var(--transition-base);
+}

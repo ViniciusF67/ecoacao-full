@@ -1,0 +1,53 @@
+.sobre-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-7);
+}
+
+.pilar-card {
+  background: var(--eco-white);
+  border: 1px solid var(--eco-gray-100);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+  text-align: center;
+}
+.pilar-card__numero {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--eco-green-500);
+  margin-bottom: var(--space-2);
+}
+.pilar-card h3 { margin-bottom: var(--space-2); font-size: var(--fs-md); }
+.pilar-card p { font-size: var(--fs-sm); margin: 0; }
+
+.ods-box {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  background: var(--eco-blue-100);
+  border-radius: var(--radius-lg);
+  padding: var(--space-7);
+}
+.ods-box__badge {
+  flex-shrink: 0;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: var(--eco-blue-700);
+  color: var(--eco-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: var(--fs-md);
+  text-align: center;
+}
+.ods-box h2 { margin-bottom: var(--space-2); }
+.ods-box p:last-child { margin-bottom: 0; }
+
+@media (max-width: 800px) {
+  .sobre-intro { grid-template-columns: 1fr; }
+  .ods-box { flex-direction: column; text-align: center; }
+}

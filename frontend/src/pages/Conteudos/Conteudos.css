@@ -1,0 +1,10 @@
+.conteudos-filtros {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+
+@media (max-width: 700px) {
+  .conteudos-filtros { grid-template-columns: 1fr; }
+}
